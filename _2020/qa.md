@@ -8,437 +8,354 @@ video:
   id: Wz50FvGG6xU
 ---
 
-Son dersimizde, öğrencilerin yönelttiği soruları cevapladık:
+For the last lecture, we answered questions that the students submitted:
 
-- [İşletim Sistemleri ile ilgili olan process, sanal bellek, interrupt, bellek yönetimi gibi konuları öğrenmeyle ilgili tavsiyeleriniz nelerdir?](#isletim-sistemleri-ile-ilgili-olan-process-sanal-bellek-interrupt-bellek-yonetimi-gibi-konulari-ogrenmeyle-ilgili-tavsiyeleriniz-nelerdir)
-- [Öncelikli olarak öğrenilmesi gerektiğini düşündüğünüz araçlardan bazıları nelerdir?](#oncelikli-olarak-ogrenilmesi-gerektigini-dusundugunuz-araclardan-bazilari-nelerdir)
-- [Bash scriptlerini, Python'u veya diğer dilleri hangi durumlarda kullanabilirim?](#bash-scriptlerini-pythonu-veya-diger-dilleri-hangi-durumlarda-kullanabilirim")
-- [`source script.sh` ve `./script.sh` arasındaki fark nedir?](#source-script-sh-ve-script-sh-arasindaki-fark-nedir)
-- [Farklı paketlerin ve araçların depolandığı yerler nelerdir ve nasıl görebiliriz? `/bin` ve `/lib` gibi dizinlerin aralarındaki farklar nelerdir?](#farkli-paketlerin-ve-araclarin-depolandigi-yerler-nelerdir-ve-nasıl-gorebiliriz)
-- [Python paketlerini `apt-get install` ile mi yoksa `pip install` ile mi kurmalıyım?](#python-paketlerini-apt-get-install-ile-mi-yoksa-pip-install-ile-mi-kurmaliyim)
-- [Kodumun performansını iyileştirmek için kullanabileceğim en iyi ve en kolay **profiling** araçları nelerdir?](#kodumun-performansini-iyilestirmek-icin-kullanabilecegim-en-iyi-ve-en-kolay-profilling-araçları-nelerdir)
-- [Hangi tarayıcı eklentilerini kullanıyorsunuz?](#hangi-tarayici-eklentilerini-kullaniyorsunuz)
-- [Diğer faydalı **data wrangling** araçları nelerdir?](#diger-faydali-data-wrangling-araclari-nelerdir)
-- [Docker ve Sanal Makine arasındaki fark nedir?](#docker-ve-sanal-makine-arasindaki-fark-nedir)
-- [İşletim sistemlerinin avantajları ve dezavantajları nelerdir ve aralarında nasıl seçim (örneğin amaçlarımıza en uygun Linux dağıtımını seçmek) yapabiliriz?](#isletim-sistemlerinin-avantajlari-ve-dezavantajlari-nelerdir-ve-aralarinda-nasil-secim-yapabiliriz)
+- [Any recommendations on learning Operating Systems related topics like processes, virtual memory, interrupts, memory management, etc](#any-recommendations-on-learning-operating-systems-related-topics-like-processes-virtual-memory-interrupts-memory-management-etc)
+- [What are some of the tools you'd prioritize learning first?](#what-are-some-of-the-tools-youd-prioritize-learning-first)
+- [When do I use Python versus a Bash scripts versus some other language?](#when-do-i-use-python-versus-a-bash-scripts-versus-some-other-language)
+- [What is the difference between `source script.sh` and `./script.sh`](#what-is-the-difference-between-source-scriptsh-and-scriptsh)
+- [What are the places where various packages and tools are stored and how does referencing them work? What even is `/bin` or `/lib`?](#what-are-the-places-where-various-packages-and-tools-are-stored-and-how-does-referencing-them-work-what-even-is-bin-or-lib)
+- [Should I `apt-get install` a python-whatever, or `pip install` whatever package?](#should-i-apt-get-install-a-python-whatever-or-pip-install-whatever-package)
+- [What's the easiest and best profiling tools to use to improve performance of my code?](#whats-the-easiest-and-best-profiling-tools-to-use-to-improve-performance-of-my-code)
+- [What browser plugins do you use?](#what-browser-plugins-do-you-use)
+- [What are other useful data wrangling tools?](#what-are-other-useful-data-wrangling-tools)
+- [What is the difference between Docker and a Virtual Machine?](#what-is-the-difference-between-docker-and-a-virtual-machine)
+- [What are the advantages and disadvantages of each OS and how can we choose between them (e.g. choosing the best Linux distribution for our purposes)?](#what-are-the-advantages-and-disadvantages-of-each-os-and-how-can-we-choose-between-them-eg-choosing-the-best-linux-distribution-for-our-purposes)
 - [Vim vs Emacs?](#vim-vs-emacs)
-- [Makine Öğrenimi uygulamaları için ipuçları ve püf noktalar nelerdir?](#makine-ögrenimi-uygulamalari-icin-ipuclari-ve-puf-noktalar-nelerdir)
-- [Başka Vim ipuçları?](#baska-vim-ipuclari)
-- [2FA nedir ve neden kullanmalıyım?](#2fa-nedir-ve-neden-kullanmalıyım)
-- [Web tarayıcıları arasındaki farklar hakkında yorumunuz nedir?](#web-tarayicilari-arasindaki-farklar-hakkinda-yorumunuz-nedir)
+- [Any tips or tricks for Machine Learning applications?](#any-tips-or-tricks-for-machine-learning-applications)
+- [Any more Vim tips?](#any-more-vim-tips)
+- [What is 2FA and why should I use it?](#what-is-2fa-and-why-should-i-use-it)
+- [Any comments on differences between web browsers?](#any-comments-on-differences-between-web-browsers)
 
-<h2 id="isletim-sistemleri-ile-ilgili-olan-process-sanal-bellek-interrupt-
-bellek-yonetimi-gibi-konulari-ogrenmeyle-ilgili-tavsiyeleriniz-nelerdir">
-İşletim Sistemleri ile ilgili olan process (işlem), sanal bellek, interrupt
-(kesme), bellek yönetimi gibi konuları öğrenmeyle ilgili tavsiyeleriniz
-nelerdir?
-</h2>
+## Any recommendations on learning Operating Systems related topics like processes, virtual memory, interrupts, memory management, etc 
 
-Öncelikle, oldukça düşük seviye konular olduğundan tüm bunlara gerçekten
-aşina olmanız gerekip gerekmediği meçhuldür. Kernelde değişiklik yapmak
-veya kerneli **implement etmek** gibi daha düşük seviyeli kodlar yazmaya
-başlarsanız önemli olacaktır. Aksi halde, diğer derslerde kısaca ele
-alınacak olan işlemler (process) ve sinyaller hariç, çoğu konuyla ilişkisi
-yoktur.
+First, it is unclear whether you actually need to be very familiar with all of these topics
+since they are very low level topics.They will matter as you start writing more low level 
+code like implementing or modifying a kernel. Otherwise, most topics will not be relevant, 
+with the exception of processes and signals that were briefly covered in other lectures. 
 
-Bu konu hakkında bilgi edinmek için bazı iyi kaynaklar:
+Some good resources to learn about this topic:
 
-- [MIT's 6.828 class](https://pdos.csail.mit.edu/6.828/) - İşletim Sistemi
-Mühendisliği lisansüstü dersi. Sınıf materyalleri herkese açıktır.
-- Modern Operating Systems (4th ed) - Andrew S. Tanenbaum kitabı bahsedilen
-kavramların çoğuna iyi bir genel bakış sağlar.
-- The Design and Implementation of the FreeBSD Operating System - FreeBSD
-işletim sistemi hakkında güzel bir kaynak (bunun Linux olmadığını unutmayın). 
-- Ve insanların çoğunlukla öğretim amaçlı olmak üzere çeşitli dillerde
-adım adım kernel **implement ettiği** [Rust ile işletim sistemi yazmak](https://os.phil-opp.com/) 
-gibi bir takım kılavuzlar. 
-
-<h2 id="oncelikli-olarak-ogrenilmesi-gerektigini-dusundugunuz-araclardan-
-bazilari-nelerdir">
-Öncelikli olarak öğrenilmesi gerektiğini düşündüğünüz araçlardan bazıları
-nelerdir?
-</h2>
-
-Öncelik vermeye değer bazı konular:
-
-- Fareyi daha az, klavyeyi daha fazla kullanmayı öğrenin. Bu klavye
-kısayolları ve arayüz değiştirme gibi çeşitli yöntemlerle olabilir.
-- Editörünüzü iyi öğrenin. Bir programcı olarak zamanınızın çoğu dosyaları
-düzenlemekle geçer, bu nedenle bu beceriye sahip olmak gerçekten işe yarar.
-- İş akışınızdaki tekrarlayan görevleri otomatikleştirmeyi ve basitleştirmeyi
-öğrenin, çünkü çok büyük bir zaman tasarruf sağlar.
-- Git gibi versiyon kontrol araçlarını ve modern yazılım projelerinde
-başkalarıyla çalışabilmek için Github ile birlikte nasıl kullanılacakları
-konusunda bilgi edinin.
-
-<h2 id="bash-scriptlerini-pythonu-veya-diger-dilleri-hangi-durumlarda-
-kullanabilirim">
-Bash scriptlerini, Python'u veya diğer dilleri hangi durumlarda
-kullanabilirim?
-</h2>
-
-Bash scriptleri, yalnızca belirli komut dizilerini çalıştırmak istediğiniz
-kısa ve tek seferlik basit scriptler için kullanışlıdır. bash, daha büyük
-programlarda veya scriptlerde çalışmayı zorlaştıran bir dizi garipliğe
-sahiptir:
-
-- bash'te basit bir kullanım durumunu hatasız yazmak kolaydır, ancak tüm 
-olası girdileri doğru bir şekilde elde etmek gerçekten zor olabilir.
-Örneğin, script argümanlarında bulunan boşluklar bash scriptleri için
-sayısız hataya yol açar.
-- bash, kodun yeniden kullanılmasına uygun değildir, bu nedenle daha önce
-yazmış olduğunuz programların bileşenlerini yeniden kullanmak zor olabilir.
-Daha net söyleyecek olursak, bash'de yazılım kütüphanesi kavramı yoktur.
-- bash, belirli değerleri ifade etmek için `$?` veya `$@` gibi birçok
-sihirli stringe dayanırken, diğer diller onları açıkca belirtir. Örneğin
-sırasıyla `exitCode` ve `sys.args` gibi.
-
-Bu nedenle, daha büyük ve/veya karmaşık scriptler için Python ve Ruby gibi
-daha olgun script dillerini kullanmanızı öneririz. İnsanların bu dillerde
-sık karşılaşılan sorunları çözmek için daha önce yazmış oldukları sayısız
-kütüphane bulabilirsiniz. Bir dilde size lazım olan işlevleri yerine getiren
-bir kütüphane bulursanız, genellikle yapılacak en iyi şey bu dili kullanmaktır.
-
-<h2 id="source-script-sh-ve-script-sh-arasindaki-fark-nedir">
-<code>source script.sh</code> ve <code>./script.sh</code> arasındaki fark
-nedir?
-</h2>
-
-Her iki durumda da `script.sh` dosyası bir bash oturumunda okunacak ve
-yürütülecektir. Aralarındaki fark oturumun (session) komutları çalıştırma
-şeklindedir. `source` için komutlar geçerli bash oturumunuzda yürütülür
-ve bu nedenle geçerli ortam üzerinde yapılan dizin değiştirme veya fonksiyon
-tanımlama gibi değişiklikler, `source` komutunun yürütülmesi tamamlandığında
-geçerli oturumda devam edecektir. Script `./script.sh` şeklinde
-çalıştırıldığında, geçerli bash oturumunuz `script.sh` dosyasındaki
-komutları çalıştırmak için yeni bir bash örneği (**instance of bash**)
-başlatır. Bu nedenle, `script.sh` dizinleri değiştirirse, yeni bash örneği
-dizinleri değiştirir, ancak script tamamlanıp kontrol ana bash oturumuna
-geçtiğinde üst oturum aynı konumda kalır. Benzer şekilde, `script.sh`,
-terminalinizde erişmek istediğiniz bir fonksiyonu tanımlıyorsa, geçerli
-bash oturumunuzda kullanmak için `source` etmeniz gerekir. Aksi takdirde
-çalıştırdığınızda yeni bash işlemi (process), geçerli shell'iniz yerine
-fonksiyon tanımını gerçekleştiren işlem olacaktır.
-
-<h2 id="farkli-paketlerin-ve-araclarin-depolandigi-yerler-nelerdir-ve-
-nasıl-gorebiliriz">
-Farklı paketlerin ve araçların depolandığı yerler nelerdir ve nasıl
-görebiliriz? `/bin` ve `/lib` gibi dizinlerin aralarındaki farklar nelerdir?
-</h2>
-
-Terminalinizde yürüttüğünüz programlara bakacak olursak, tümü `PATH` ortam
-değişkeninde listelenen dizinlerde bulunur. Shell'inizin belirli bir programı
-nereden çalıştırdığını görmek için `which` komutunu (ya da `type` komutunu)
-kullanabilirsiniz. Genelde, belirli dosya türlerinin nerede olduğuna dair
-bazı kurallar bulunur. İşte konuştuklarımızdan bazıları, daha kapsamlı bir
-listei için [Dosya Sistemi Hiyerarşi Standardı](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
-'na bakabilirsiniz.  
-
-- `/bin` - Önemli program dosyaları
-- `/sbin` - Root izni gerektiren önemli program dosyaları
-- `/dev` - Donanım aygıtlarının arabirim dosyaları
-- `/etc` - Sistem yapılandırma dosyaları
-- `/home` - Kullanıcılara ayrılmış ev dizinleri
-- `/lib` - Kütüphane dosyaları
-- `/opt` - Üçüncü parti programların dosyaları
-- `/sys` - Sistemin bilgi ve konfigürasyon dosyaları ([ilk derste](/2020/course-shell/) bahsi geçti)
-- `/tmp` - Sistem yeniden başlatılınca silinen geçici dosyalar (keza `/var/tmp`)
-- `/usr/` - Tüm kullanıcıların paylaştığı dosyalar
-  + `/usr/bin` - Program dosyaları
-  + `/usr/sbin` - Root izni gerektiren program dosyaları
-  + `/usr/local/bin` - Kullanıcı tarafından derlenen programların dosyaları
-- `/var` - Log (günlük) ve Cache (önbellek) dosyaları gibi sürekli değişen verileri barındıran dosyalar
-
-<h2 id="python-paketlerini-apt-get-install-ile-mi-yoksa-pip-install-ile-mi-kurmaliyim">
-Python paketlerini <code>apt-get install</code> ile mi yoksa <code>pip install</code>
-ile mi kurmalıyım?
-</h2>
-
-Bu sorunun genel geçer bir cevabı yok. Aslında daha çok yazılım yüklemek
-için sisteminizin paket yöneticisini mi yoksa dilin paket yöneticisini mi
-kullanmanız gerektiğiyle ilgilidir. Dikkate alınması gereken birkaç şey:
-
-- Yaygın paketler her ikisinde de bulunabilir, ancak daha az popüler olan
-veya yeni oluşturulmuş olan paketler sistem paket yöneticinizde bulunmayabilir.
-Bu durumda, dile özgü aracı kullanmak daha iyi bir seçimdir.
-- Benzer şekilde, dile özgü paket yöneticileri genellikle sistem paket
-yöneticilerinden daha güncel sürümlere sahiptir.
-- Sistem paket yöneticinizi kullanırken, kütüphaneler sistem genelinde
-kurulacaktır. Bu, geliştirme amacıyla bir kitaplığın farklı sürümlerine
-ihtiyacınız varsa sistem paket yöneticisinin yeterli olamayabileceği anlamına
-gelir. Bu senaryo için, çoğu programlama dili bir tür yalıtılmış sanal
-ortam sağlar. Böylelikle kütüphanelerin farklı sürümlerini çakışmalara
-neden olmadan yükleyebilirsiniz. Python için virtualenv, Ruby için RVM
-örneklerindeki gibi.
-- İşletim sistemine ve donanım mimarisine bağlı olarak, bu paketlerin
-bazıları binary dosyalar ile gelebilir ve derlenmesi gerekebilir. Örneğin,
-Raspberry Pi gibi ARM mimarili bilgisayarlarda, binary dosyalar halinde
-geliyor ve sonrasında derlenmeleri gerekiyorsa, sistem paket yöneticisini
-kullanmak dile özgü olandan daha iyi olabilir. Bu büyük ölçüde sizin
-sisteminize bağlıdır.
-
-Hata ayıklaması çakışmalara yol açabileceğinden, her ikisini birden değil,
-sadece birini kullanmaya çalışmalısınız.Tavsiyemiz, mümkün olduğu kadar
-dile özgü paket yöneticisini izole ortamlar ile kullanarak global ortamları
-kirletmemeniz. 
-
-<h2 id="kodumun-performansini-iyilestirmek-icin-kullanabilecegim-en-iyi-ve
--en-kolay-profilling-araçları-nelerdir">
-Kodumun performansını iyileştirmek için kullanabileceğim en iyi ve en kolay
-<b>profiling</b> araçları nelerdir?
-</h2>
-
-**profilling** amacıyla kullanmak oldukça kullanışlı olan en kolay araç
-[süre ölçerek yazdırmadır](/2020/debugging-profiling/#timing).
-Kodunuzun farklı bölümleri arasında geçen süreyi manuel olarak hesaplarsınız.
-Bunu defalarca yaparak, kodunuz üzerinde etkili bir binary arama yapabilir
-ve en uzun süren kod parçasını bulabilirsiniz. 
-
-Daha gelişmiş araçlar için, Valgrind'in [Callgrind](http://valgrind.org/docs/manual/cl-manual.html)
-aracı, programınızı çalıştırmanıza, tüm çağrı yığınlarının (call stack) ve
-diğer şeylerin ne kadar sürdüğünü ölçmenize olanak tanır. Sonrasında,
-programınızın kaynak kodunun satır başına harcadığı süreyi içeren ek açıklamalı
-bir versiyonunu oluşturur. Ancak, programınızın büyüklüğüne göre yavaş
-çalışır ve iş parçacıklarını (thread) desteklemez. Diğer durumlar için,
-[`perf`](http://www.brendangregg.com/perf.html) aracı ve dile özgü diğer
-**sampling profiler**ları yararlı verileri oldukça hızlı bir şekilde üretebilir.
-[Flamegraphs](http://www.brendangregg.com/flamegraphs.html), bahsedilen
-**sampling profiler** çıktısı için iyi bir görselleştirme aracıdır. Ayrıca,
-üzerinde çalıştığınız programlama dili veya programlama görevi için özel araçlar
-kullanmaya çalışmalısınız. Örneğin, web geliştirme için, Chrome ve Firefox'taki
-dahili geliştirici araçlarının fantastik **profiler**ları vardır.
-
-Bazen kodunuzun yavaş kısmı, sisteminizin disk okuması veya paket iletimi
-gibi bir olay bekleme aşaması olabilir.
-**In those cases, it is worth checking that back-of-the-envelope calculations about the theoretical speed in terms of hardware capabilities do not deviate from the actual readings**. Sistem çağrılarındaki
-bekleme sürelerini analiz etmek için özelleşmiş araçlar da vardır. Bunlar,
-kullanıcı programlarının çekirdek izlemesini gerçekleştiren
-[eBPF](http://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
-gibi araçları içerir. Özellikle bu tür düşük seviye **profiling** yapmanız
-gerekiyorsa [`bpftrace`](https://github.com/iovisor/bpftrace) aracı göz atmaya değerdir.
+- [MIT's 6.828 class](https://pdos.csail.mit.edu/6.828/) - Graduate level class on Operating
+System Engineering. Class materials are publicly available.
+- Modern Operating Systems (4th ed) - by Andrew S. Tanenbaum is a good overview of many 
+of the mentioned concepts.
+- The Design and Implementation of the FreeBSD Operating System - A good resource about the 
+FreeBSD OS (note that this is not Linux). 
+- Other guides like [Writing an OS in Rust](https://os.phil-opp.com/) where people implement
+a kernel step by step in various languages, mostly for teaching purposes. 
 
 
-<h2 id="hangi-tarayici-eklentilerini-kullaniyorsunuz">
-Hangi tarayıcı eklentilerini kullanıyorsunuz?
-</h2>
+## What are some of the tools you'd prioritize learning first?
 
-Çoğunlukla güvenlik ve kullanılabilirlikle sağlayan favorilerimizden bazıları:
+Some topics worth prioritizing:
 
-- [uBlock Origin](https://github.com/gorhill/uBlock) - Yalnızca reklamları
-durdurmakla kalmayan, aynı zamanda bir sayfayla her türlü üçüncü şahıs
-etkileşimine girmeyi deneyebileceğiniz
-[geniş yelpazeye sahip](https://github.com/gorhill/uBlock/wiki/Blocking-mode)
-bir engelleyicidir. Buna satır içi scriptler ve diğer kaynak yükleme türleri
-de dahil. Bazı ayarları özel olarak yapılandırmak için zaman harcamak
-istiyorsanız, [medium mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode)
-ve hatta [hard mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode)
-geçebilirsiniz. Bunlar, ayarlar üzerinde uğraşmadıkça bazı sitelerin
-çalışmamasına yol açar, ancak çevrimiçi güvenliğinizi önemli ölçüde arttırır.
-Aksi takdirde, [easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode)
-zaten çoğu reklamı ve izlenmeyi engelleyen iyi bir varsayılandır.
-- [Stylus](https://github.com/openstyles/stylus/) - Stylish fork'u (Stylish
-kullanmayın, [kullanıcıların göz atma geçmişini gizlice kaydettiği](https://www.theregister.co.uk/2018/07/05/browsers_pull_stylish_but_invasive_browser_extension/)
-ortaya çıktı),websitelere özel CSS stil sayfaları eklemenize izin verir.
-Stylus ile web sitelerinin görünümünü kolayca değiştirebilir ve
-özelleştirebilirsiniz. Örneğin kenar çubuğunu kaldırabilir, arka plan
-rengini, metin boyutunu veya yazı tipi tercihini değiştirebilirsiniz. Bu,
-sık ziyaret ettiğiniz web sitelerini daha okunaklı yapmak için harikadır.
-Ayrıca, Stylus diğer kullanıcılar tarafından yazılan ve
-[userstyles.org](https://userstyles.org/)'da yayınlanan stilleri bulabilir.
-Çoğu yaygın web sitesinde örneğin bir veya birkaç karanlık tema stil sayfası
-bulunur. 
-- Tam Sayfa Ekran Yakalama - Firefox ve 
-[Chrome eklentisi](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl?hl=en)
-vardır. Web sitenin tam ekran görüntüsünü alır, genellikle referans amaçlı
-çıktı alırken iyidir.
-- [Multi Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) 
-\- çerezleri "konteyner" olarak ayırmanıza olanak tanır. Böylece internette
-farklı kimliklerle dolaşmanızı ve web sitelerin kendi aralarında bilgi
-paylaşmasını engeller.
-- Şifre Yöneticisi Entegrasyonu - Çoğu şifre yöneticisinin, kimlik bilgilerini
-sitelere girmeyi daha güvenli hale getiren tarayıcı uzantıları vardır.
-Kullanıcı adı ve şifrenizi basitçe kopyalayıp yapıştırmayla karşılaştırıldığında,
-bu araçlar önce web sitesi alan adının giriş için listelenen alan adıyla
-eşleşip eşleşmediğini kontrol ederek kimlik bilgilerini çalmak için popüler
-web sitelerini taklit eden kimlik avı saldırılarını önler.
+- Learning how to use your keyboard more and your mouse less. This can be through keyboard 
+shortcuts, changing interfaces, &c.
+- Learning your editor well. As a programmer most of your time is spent editing files so 
+it really pays off to learn this skill well.
+- Learning how to automate and/or simplify repetitive tasks in your workflow because the 
+time savings will be enormous...
+- Learning about version control tools like Git and how to use it in conjunction with GitHub
+to collaborate in modern software projects.
 
-<h2 id="diger-faydali-data-wrangling-araclari-nelerdir">
-Diğer faydalı data wrangling araçları nelerdir?
-</h2>
+## When do I use Python versus a Bash scripts versus some other language?
 
-**Data wrangling** dersi sırasında yer verme fırsatımızın olmadığı araçlardan
-bazıları, sırasıyla JSON ve HTML verileri için özel ayrıştırıcılar olan `jq`
-ve `pup`'tır. Perl programlama dili, daha gelişmiş **data wrangling pipelines**
-için bir diğer güzel araçtır. Başka bir püf nokta, boşluklu metni sütunlar
-halinde düzgünce hizalanmış bir metne dönüştürmek için kullanılan `column -t`
-komutudur.
+In general, bash scripts are useful for short and simple one-off scripts when you just want
+to run a specific series of commands. bash has a set of oddities that make it hard to work 
+with for larger programs or scripts:
 
-Daha genel olarak alışılmadık diğer veri düzenleme araçları ise vim ve
-Python'dur. Bazı karmaşık ve çok satırlı dönüşümler için, vim makroları
-kullanımı oldukça kolay değerli bir araç olabilir. Bir dizi eylemi
-kaydedebilir ve bunları istediğiniz kadar tekrarlayabilirsiniz, örneğin
-editörler hakkındaki [ders notunda](/2020/editors/#macros) (ve geçen yılki
-[videoda](/2019/editors/)) XML formatlı bir dosyayı sadece vim makroları
-kullanılarak JSON'a dönüştürme örneği mevcut.
+- bash is easy to get right for a simple use case but it can be really hard to get right for
+all possible inputs. For example, spaces in script arguments have led to countless bugs in bash scripts.
+- bash is not amenable to code reuse so it can be hard to reuse components of previous program
+s you have written. More generally, there is no concept of software libraries in bash.
+- bash relies on many magic strings like `$?` or `$@` to refer to specific values, whereas other
+languages refer to them explicitly, like `exitCode` or `sys.args` respectively. 
 
-[pandas](https://pandas.pydata.org/) Python kütüphanesi genellikle
-CSV'lerde sunulan tablo verileri için harika bir araçtır. Sadece gruplandırma,
-birleştirme veya filtreleme gibi karmaşık işlemleri tanımlamayı kolaylaştırmakla
-kalmaz, aynı zamanda verilerinizin farklı özelliklerinin grafiklerini çizmeyi
-de oldukça kolaylaştırır. Ayrıca XLS, HTML veya LaTeX gibi birçok tablo
-formatında dışa aktarmayı destekler. Alternatif olarak R programlama dili
-(tartışmasız [kötü](http://arrgh.tim-smith.us/) bir programlama dili),
-veriler üzerindeki istatistikleri hesaplamak için birçok işlevselliğe
-sahiptir ve pipeline'ınızın son adımı olarak oldukça yararlı olabilir.
-[ggplot2](https://ggplot2.tidyverse.org/), R'de harika bir çizim kütüphanesidir. 
+Therefore, for larger and/or more complex scripts we recommend using more mature scripting
+languages like Python or Ruby. You can find online countless libraries that people have already
+written to solve common problems in these languages.If you find a library that implements the specific 
+functionality you care about in some language,usually the best thing to do is to just use that language.
 
-<h2 id="docker-ve-sanal-makine-arasindaki-fark-nedir">
-Docker ve Sanal Makine arasındaki fark nedir?
-</h2>
+## What is the difference between `source script.sh` and `./script.sh`
 
-Docker, konteyner olarak adlandırılan daha kapsamlı bir konsepte dayanmaktadır.
-Konteynerler ve sanal makineler arasındaki temel fark, sanal makinelerin
-çekirdek ana makine ile aynı olsa bile, çekirdek de dahil olmak üzere tüm
-OS yığınını yürütmesidir. VM'lerin aksine konteynerler, çekirdeğin başka
-bir örneğini çalıştırmaktan kaçınır ve bunun yerine çekirdeği ana bilgisayarla
-paylaşırlar. Linux'ta bu, LXC adı verilen mekanizma ile elde edilir ve kendi
-donanımında çalıştığını düşünen bir programı döndürmek için bir dizi yalıtım
-mekanizmasından yararlanır, ama  aslında donanımı ve çekirdeği ana bilgisayarla
-paylaşır. Böylece konteynerler tam yükteki VM'den daha düşük ek yüke sahiptir.
-Diğer taraftan bakarsak, konteynerler daa zayıf bir yalıtıma sahiptir ve
-yalnızca ana bilgisayar aynı çekirdekte koşuyorsa çalışır. Örneğin, Docker'ı
-macOS'ta çalıştırıyorsanız, Docker'ın ilk Linux çekirdeğini almak için bir
-Linux sanal makinesini döndürmesi gerekir ve bu nedenle ek yük hala önemlidir.
-Son olarak Docker, konteynerlerin özel bir implementasyonudur ve yazılım
-dağıtımı için uyarlanmıştır. Bu nedenle, bazı tuhaflıkları vardır; örneğin,
-Docker konteynerleri varsayılan olarak yeniden başlatmalar arasında herhangi
-bir depolama biçiminde kalamaz.
+In both cases the `script.sh` will be read and executed in a bash session, the difference
+lies in which session is running the commands.For `source` the commands are executed in 
+your current bash session and thus any changes made to the current environment, like changing 
+directories or defining functions will persist in the current session once the `source` command 
+finishes executing.When running the script standalone like `./script.sh`, your current bash 
+session starts a new instance of bash that will run the commands in `script.sh`. Thus, if 
+`script.sh` changes directories, the new bash instance will change directories but once it 
+exits and returns control to the parent bash session, the parent session will remain in the 
+same place.Similarly, if `script.sh` defines a function that you want to access in your terminal,
+you need to `source` it for it to be defined in your current bash session. Otherwise, if you run it,
+the new bash process will be the one to process the function definition instead of your current shell.
 
-<h2 id="isletim-sistemlerinin-avantajlari-ve-dezavantajlari-nelerdir-ve-aralarinda-nasil-secim-yapabiliriz">
-İşletim sistemlerinin avantajları ve dezavantajları nelerdir ve aralarında
-nasıl seçim (örneğin amaçlarımıza en uygun Linux dağıtımını seçmek) yapabiliriz?
-</h2>
+## What are the places where various packages and tools are stored and how does referencing them work? What even is `/bin` or `/lib`?
 
-Linux dağıtımları, çok sayıda dağıtım olmasına rağmen, çoğu kullanım
-durumunda aynı şekilde davranacaklardır. 
-Linux ve UNIX özelliklerinin ve çalışma biçimlerinin çoğu herhangi bir
-dağıtımda öğrenilebilir. 
-Dağıtımlar arasındaki temel fark, paket güncellemeleriyle nasıl başa
-çıktıklarıdır. 
-Arc Linux gibi bazı dağıtımlar, her şeyin en son versiyona sahip oldukları
-ve çok sıkı bozulabildiği sallantılı bir güncelleme politikası izlerler.
-Öte yandan Debian, CentOS gibi bazı dağıtımlar ve Ubuntu'nun LTS sürümleri
-depolarındaki güncellemeleri yayınlarken çok daha tutucu olduğundan, yeni
-özelliklerden ödün vermek pahasına kararlı durumlarını korurlar.
-Hem masaüstü bilgisayarlar hem de sunucularla kolay ve kararlı bir deneyim
-için önerimiz Debian veya Ubuntu kullanmaktır.
+Regarding programs that you execute in your terminal, they are all found in the directories 
+listed in your `PATH` environment variable and you can use the `which` command (or the `type` command)
+to check where your shell is finding a specific program.In general, there are some conventions
+about where specific types of files live. Here are some of the ones we talked about, check 
+the [Filesystem, Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
+for a more comprehensive list.  
 
-Mac OS, Windows ve Linux arasındaki orta noktadır ve güzel bir arayüze sahiptir.
-Ancak MacOS, Linux'dan ziyade BSD tabanlıdır. Bu nedenle sistemin ve komutların
-bazı kısımları farklıdır. Göz atmaya değer bir alternatif ise FreeBSD'dir.
-Bazı programlar FreeBSD'de çalışmayacak olsa da, BSD ekosistemi Linux'tan
-daha az dallara ayrılmış ve daha iyi belgelenmiştir. 
-Windows'u ise Windows uygulamaları geliştirmek ve oyun oynamak için en iyi
-sürücü desteği gibi akıl çelici özelliklerine ihtiyacımız olmayacaksa tavsiye
-etmiyoruz. 
+- `/bin` - Essential command binaries
+- `/sbin` - Essential system binaries, usually to be run by root
+- `/dev` - Device files, special files that often are interfaces to hardware devices
+- `/etc` - Host-specific system-wide configuration files
+- `/home` - Home directories for users in the system
+- `/lib` - Common libraries for system programs
+- `/opt` - Optional application software
+- `/sys` - Contains information and configuration for the system (covered in the
+[first lecture](/2020/course-shell/))
+- `/tmp` - Temporary files (also `/var/tmp`). Usually deleted between reboots.
+- `/usr/` - Read only user data
+  + `/usr/bin` - Non-essential command binaries
+  + `/usr/sbin` - Non-essential system binaries, usually to be run by root
+  + `/usr/local/bin` - Binaries for user compiled programs
+- `/var` - Variable files like logs or caches
 
-Dual boot sistemler için, en iyi çalışan implementasyonun macOS’in bootcamp'i
-olduğunu ve özellikle disk şifreleme gibi diğer özelliklerle birleştirirseniz,
-diğer tüm kombinasyonların uzun vadede sorun yaratabileceğini düşünüyoruz.
+## Should I `apt-get install` a python-whatever, or `pip install` whatever package?
 
-<h2 id="vim-vs-emacs">
-Vim vs Emacs?
-</h2>
+There's no universal answer to this question. It's related to the more general question
+of whether you should use your system's package manager or a language-specific package
+manager to install software. A few things to take into account:
 
-Üçümüz de birincil editörümüz olarak Vim kullanıyoruz ancak Emacs da iyi
-bir alternatif. Hangisinin sizin için daha iyi olduğunu görmek için denemeye
-değer. Emacs, vim'in **modal editing** özelliğini barındırmaz. Fakat bu,
-[Evil](https://github.com/emacs-evil/evil) ve
-[Doom Emacs](https://github.com/hlissner/doom-emacs) eklentileri aracılığıyla 
-etkinleştirilebilir. 
-Emacs kullanmanın bir avantajı, bu uzantıların Vim'in varsayılan script
-dili vimscript'ten daha iyi bir script dili olan Lisp'te uygulanabilinmesidir.
+- Common packages will be available through both, but less popular ones or more recent 
+ones might not be available in your system package manager. In this, case using the 
+language-specific tool is the better choice.
+- Similarly, language-specific package managers usually have more up to date versions 
+of packages than system package managers.
+- When using your system package manager, libraries will be installed system wide. 
+This means that if you need different versions of a library for development purposes, 
+the system package manager might not suffice. For this scenario, most programming 
+languages provide some sort of isolated or virtual environment so you can install 
+different versions of libraries without running into conflicts. For Python, there's 
+virtualenv, and for Ruby, there's RVM.
+- Depending on the operating system and the hardware architecture, some of these 
+packages might come with binaries or might need to be compiled. For instance, in 
+ARM computers like the Raspberry Pi, using the system package manager can be better
+than the language specific one if the former comes in form of binaries and the 
+later needs to be compiled. This is highly dependent on your specific setup.
 
-<h2 id="makine-ögrenimi-uygulamalari-icin-ipuclari-ve-puf-noktalar-nelerdir">
-Makine Öğrenimi uygulamaları için ipuçları ve püf noktalar nelerdir?
-</h2>
+You should try to use one solution or the other and not both since that can lead 
+to conflicts that are hard to debug. Our recommendation is to use the language-specific 
+package manager whenever possible, and to use isolated environments (like Python's virtualenv) 
+to avoid polluting the global environment. 
 
-Buradaki bazı dersler ve düşünceler Makine Öğrenimi uygulamalarına doğrudan
-uygulanabilir. 
-Birçok bilim dalında olduğu gibi, ML'de sıklıkla bir dizi deney yaparsınız
-ve neyin işe yarayıp neyin işe yaramadığını kontrol etmek istersiniz. 
-Bu deneylerde kolayca ve hızlı bir şekilde arama yapmak ve sonuçları anlamlı
-bir şekilde toplamak için shell araçlarını kullanabilirsiniz. Bu, verilen
-zaman diliminde  veya belirli bir veriseti kullanan tüm deneylerin alt
-seçimi anlamına gelebilir. Deneyler sonucunda ulaşılan parametreleri saklamak
-için basit bir JSON dosyası kullanmak, bu sınıfta ele aldığımız araçlarla
-inanılmaz derecede kolay olabilir. Son olarak, GPU görevlerinizi gönderdiğiniz
-bir tür kümeyle çalışmıyorsanız, zihinsel enerjinizi de tüketen oldukça zaman
-alıcı bir görev olabileceğinden, bu süreci nasıl otomatikleştireceğinizi
-araştırmalısınız.
+## What's the easiest and best profiling tools to use to improve performance of my code?
 
-<h2 id="baska-vim-ipuclari">
-Başka Vim ipuçları?
-</h2>
+The easiest tool that is quite useful for profiling purposes is [print timing]
+(/2020/debugging-profiling/#timing).You just manually compute the time taken between 
+different parts of your code. By repeatedly doing this, you can effectively do a binary 
+search over your code and find the segment of code that took the longest. 
 
-Birkaç ipucu daha: 
+For more advanced tools, Valgrind's [Callgrind](http://valgrind.org/docs/manual/cl-manual.html) 
+lets you run your program and measure how long everything takes and all the call stacks, 
+namely which function called which other function. It then produces an annotated version 
+of your program's source code with the time taken per line. However, it slows down your 
+program by an order of magnitude and does not support threads. For other cases, the 
+[`perf`](http://www.brendangregg.com/perf.html) tool and other language specific sampling
+profilers can output useful data pretty quickly. [Flamegraphs](http://www.brendangregg.com/flamegraphs.html)
+are good visualization tool for the output of said sampling profilers. You should 
+also try to use specific tools for the programming language or task you are working 
+with. For example, for web development, the dev tools built into Chrome and Firefox 
+have fantastic profilers.
 
-- Eklentiler - Aceleye etmeden eklenti mağazasını keşfedin. Bazı vim
-eksiklerini gideren veya mevcut vim iş akışlarıyla uyumlu yeni işlevler
-ekleyen birçok harika eklenti vardır. Bunun için en iyi kaynaklar
-[VimAwesome](https://vimawesome.com/) ve diğer programcıların **dotfile**'larıdır.
-- İşaretler - Vim'de, bazı `X` harfleri için `m<X>` yaparak işaret
-oluşturabilirsiniz. Daha sonra`'<X>` kullanarak o işarete geri dönebilirsiniz.
-Bu, bir dosyadaki ve hatta dosyalar arasındaki belirli konumlara hızlı
-şekilde gitmenizi sağlar.
-- Gezinme - `Ctrl+O` ve `Ctrl+I` son gittiğiniz konumlarda sizi sırasıyla
-ileri ve geri hareket ettirir.
-- **Undo Tree**- Vim, değişiklikleri takip etmek için oldukça süslü bir
-mekanizmaya sahiptir. Diğer editörlerin aksine, vim değişiklik ağacı saklar.
-Böylece geri alıp farklı değişiklik yapsanız bile **undo tree**de gezinerek
-orjinal durumuna geri dönebilirsiniz. [gundo.vim](https://github.com/sjl/gundo.vim)
-ve [undotree](https://github.com/mbbill/undotree) gibi bazı eklentiler bu
-ağacı grafiksel yolla gösterir. 
-- Zamana Göre Geri Alma - `:earlier` ve `:later` komutları, her seferinde
-bir değişiklik yerine zamanı referans  alarak dosyalarda gezinmenizi sağlar.
-- [Persistent undo](https://vim.fandom.com/wiki/Using_undo_branches#Persistent_undo)
-vim'de gömülü (built-in) olarak gelen ve varsayılan olarak devre dışı olan
-harika bir özelliktir. **It persists undo history between vim invocations**.
-`.vimrc` dosyanızda `undofile` ve `undodir` ayarlayarak, dosya başına
-değişiklik geçmişini depolar.
-- **Leader Key** - Leader key, genellikle özel komutlar için yapılandırılmak
-üzere kullanıcıya bırakılan özel bir anahtardır. Desen(pattern) genellikle
-bu tuşa (genelde space) ve ardından belirli bir komutu yürütmek için başka
-bir tuşa basıp bırakmaktır. Eklentiler de kendi işlevlerini eklemek için
-bu anahtarı kullanırlar; örneğin, UndoTree eklentisi geri alma ağacını
-açmak için `<Leader> U` kullanır. 
-- **Advanced Text Objects - Text objects like searches can also be composed with vim commands. E.g. `d/<pattern>` will delete to the next match of said pattern or `cgn` will change the next occurrence of the last searched string.**
+Sometimes the slow part of your code will be because your system is waiting for an event
+like a disk read or a network packet. In those cases, it is worth checking that back-of-the-envelope
+calculations about the theoretical speed in terms of hardware capabilities do not deviate 
+from the actual readings. There are also specialized tools to analyze the wait times in system
+calls. These include tools like [eBPF](http://www.brendangregg.com/blog/2019-01-01/learn-ebpf-tracing.html)
+that perform kernel tracing of user programs. In particular [`bpftrace`]
+(https://github.com/iovisor/bpftrace) is worth checking out if you need to 
+perform this sort of low level profiling.
 
-<h2 id="2fa-nedir-ve-neden-kullanmalıyım">
-2FA nedir ve neden kullanmalıyım?
-</h2>
+## What browser plugins do you use?
 
-İki Aşamalı Doğrulama (2FA), hesaplarınıza şifrelerin yanı sıra ekstra bir
-koruma katmanı ekler. Giriş yapmak için sadece parola bilmek yetmez, aynı
-zamanda bazı cihazlara erişiminizin olduğunu bir şekilde "kanıtlamanız"
-gerekir. En basit şekilde, SMS 2FA ile ilgili 
-[bilinen bazı sorunlar](https://www.kaspersky.com/blog/2fa-practical-guide/24219/) 
-olmasına rağmen, telefonunuza bir SMS gönderilerek yapılabilir.
-Desteklediğimiz daha iyi bir alternatif, [YubiKey](https://www.yubico.com/)
-gibi  [U2F](https://en.wikipedia.org/wiki/Universal_2nd_Factor) çözümü
-kullanmaktır.
+Some of our favorites, mostly related to security and usability:
 
-<h2 id="web-tarayicilari-arasindaki-farklar-hakkinda-yorumunuz-nedir">
-Web tarayıcıları arasındaki farklar hakkında yorumunuz nedir?
-</h2>
+- [uBlock Origin](https://github.com/gorhill/uBlock) - It is a [wide-spectrum]
+(https://github.com/gorhill/uBlock/wiki/Blocking-mode) blocker that doesn’t just 
+stop ads, but all sorts of third-party communication a page may try to do. This 
+also cover inline scripts and other types of resource loading. If you’re willing 
+to spend some time on configuration to make things work, go to [medium mode]
+(https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode) or even [hard mode]
+(https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode). Those will make some
+sites not work until you’ve fiddled with the settings enough, but will also significantly
+improve your online security. Otherwise, the [easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode)
+is already a good default that blocks most ads and tracking. You can also define 
+your own rules about what website objects to block.
+- [Stylus](https://github.com/openstyles/stylus/) - a fork of Stylish (don't 
+use Stylish, it was shown to [steal users browsing history](https://www.theregister.co.uk/2018/07/05/
+browsers_pull_stylish_but_invasive_browser_extension/)), allows you to sideload
+custom CSS stylesheets to websites. With Stylus you can easily customize and modify
+the appearance of websites. This can be removing a sidebar, changing the background
+color or even the text size or font choice. This is fantastic for making websites
+that you visit frequently more readable. Moreover, Stylus can find styles written 
+by other users and published in [userstyles.org](https://userstyles.org/). Most common
+websites have one or several dark theme stylesheets for instance. 
+- Full Page Screen Capture - Built into Firefox and [Chrome extension]
+(https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl?hl=en).
+Let's you take a screenshot of a full website, often much better than printing 
+for reference purposes.
+- [Multi Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) - lets
+you separate cookies into "containers", allowing you to browse the web with different
+identities and/or ensuring that websites are unable to share information between them.
+- Password Manager Integration - Most password managers have browser extensions that 
+make inputting your credentials into websites not only more convenient but also more
+secure. Compared to simply copy-pasting your user and password, these tools will first
+check that the website domain matches the one listed for the entry, preventing phishing
+attacks that impersonate popular websites to steal credentials. 
 
-2020 yılı itibariyle tarayıcıların şu anki manzarası, aynı motoru (Blink)
-kullandıklarından dolayı çoğunun Chrome'a ​​benziyor olduğudur. Bu, Blink
-tabanlı Microsoft Edge'in ve Blink'e benzer bir motor olan WebKit tabanlı 
-Safari'nin, sadece Chrome'un kötü versiyonları oldukları anlamına gelir.
-Chrome, hem performans hem de kullanılabilirlik açısından oldukça iyi bir
-tarayıcıdır. Alternatif isteyecek olursanız bizim önerimiz Firefox'tur.
-Chrome ile hemen hemen her açıdan yarışabilir ve gizlilik konusunda mükemmeldir.
-[Flow](https://www.ekioh.com/flow-browser/) isimli bir diğer tarayıcı,
-henüz kullanıma hazır olmamakla birlikte, var olanlardan daha hızlı olacağını
-iddia ettiği yeni bir render motoru uyguluyor.
+## What are other useful data wrangling tools?
+
+Some of the data wrangling tools we did not have time to cover during the data 
+wrangling lecture include `jq` or `pup` which are specialized parsers for JSON 
+and HTML data respectively. The Perl programming language is another good tool 
+for more advanced data wrangling pipelines. Another trick is the `column -t` 
+command that can be used to convert whitespace text (not necessarily aligned) 
+into properly column aligned text.
+
+More generally a couple of more unconventional data wrangling tools are vim and 
+Python. For some complex and multi-line transformations, vim macros can be a quite 
+invaluable tools to use. You can just record a series of actions and repeat them 
+as many times as you want, for instance in the editors [lecture notes](/2020/editors/#macros) 
+(and last year's [video](/2019/editors/)) there is an example of converting a 
+XML-formatted file into JSON just using vim macros.
+
+For tabular data, often presented in CSVs, the [pandas](https://pandas.pydata.org/) 
+Python library is a great tool. Not only because it makes it quite easy to define 
+complex operations like group by, join or filters; but also makes it quite easy to 
+plot different properties of your data. It also supports exporting to many table 
+formats including XLS, HTML or LaTeX. Alternatively the R programming language 
+(an arguably [bad](http://arrgh.tim-smith.us/) programming language) has lots of 
+functionality for computing statistics over data and can be quite useful as the 
+last step of your pipeline. [ggplot2](https://ggplot2.tidyverse.org/) is a great 
+plotting library in R. 
+
+## What is the difference between Docker and a Virtual Machine?
+
+Docker is based on a more general concept called containers. The main difference 
+between containers and virtual machines is that virtual machines will execute 
+an entire OS stack, including the kernel, even if the kernel is the same as the 
+host machine. Unlike VMs, containers avoid running another instance of the 
+kernel and instead share the kernel with the host. In Linux, this is achieved 
+through a mechanism called LXC, and it makes use of a series of isolation 
+mechanism to spin up a program that thinks it's running on its own hardware 
+but it's actually sharing the hardware and kernel with the host. Thus, containers 
+have a lower overhead than a full VM. 
+On the flip side, containers have a weaker isolation and only work if the host 
+runs the same kernel. For instance if you run Docker on macOS, Docker needs to 
+spin up a Linux virtual machine to get an initial Linux kernel and thus the 
+overhead is still significant. Lastly, Docker is a specific implementation 
+of containers and it is tailored for software deployment. Because of this, 
+it has some quirks: for example, Docker containers will not persist any form 
+of storage between reboots by default.
+
+## What are the advantages and disadvantages of each OS and how can we choose between them (e.g. choosing the best Linux distribution for our purposes)?
+
+Regarding Linux distros, even though there are many, many distros, most of them 
+will behave fairly identically for most use cases. 
+Most of Linux and UNIX features and inner workings can be learned in any distro. 
+A fundamental difference between distros is how they deal with package updates. 
+Some distros, like Arch Linux, use a rolling update policy where things are 
+bleeding-edge but things might break every so often. On the other hand, some 
+distros like Debian, CentOS or Ubuntu LTS releases are much more conservative 
+with releasing updates in their repositories so things are usually more stable 
+at the expense of sacrificing newer features. 
+Our recommendation for an easy and stable experience with both desktops and 
+servers is to use Debian or Ubuntu.
+
+Mac OS is a good middle point between Windows and Linux that has a nicely 
+polished interface. However, Mac OS is based on BSD rather than Linux, so some parts 
+of the system and commands are different. An alternative worth checking is FreeBSD. 
+Even though some programs will not run on FreeBSD, the BSD ecosystem is much 
+less fragmented and better documented than Linux. We discourage Windows for 
+anything but for developing Windows applications or if there is some deal 
+breaker feature that you need, like good driver support for gaming. 
+
+For dual boot systems, we think that the most working implementation is macOS' 
+bootcamp and that any other combination can be problematic  on the long run, 
+specially if you combine it with other features like disk encryption. 
+
+## Vim vs Emacs?
+
+The three of us use vim as our primary editor but Emacs is also a good 
+alternative and it's worth trying both to see which works better for you. 
+Emacs does not follow vim's modal editing, but this can be enabled through 
+Emacs plugins like [Evil](https://github.com/emacs-evil/evil) or [Doom Emacs]
+(https://github.com/hlissner/doom-emacs). An advantage of using Emacs is that 
+extensions can be implemented in Lisp, a better scripting language than 
+vimscript, Vim's default scripting language.
+
+## Any tips or tricks for Machine Learning applications?
+
+Some of the lessons and takeaways from this class can directly 
+be applied to ML applications. As it is the case with many science 
+disciplines, in ML you often perform a series of experiments and want to check 
+what things worked and what didn't. You can use shell tools to easily and quickly
+search through these experiments and aggregate the results in a sensible way. 
+This could mean subselecting all experiments in a given time frame or that use 
+a specific dataset. By using a simple JSON file to log all relevant parameters of 
+the experiments, this can be incredibly simple with the tools we covered in this 
+class. Lastly, if you do not work with some sort of cluster where you submit your 
+GPU jobs, you should look into how to automate this process since it can be a 
+quite time consuming task that also eats away your mental energy. 
+
+## Any more Vim tips?
+
+A few more tips:
+
+- Plugins - Take your time and explore the plugin landscape. There are a lot 
+of great plugins that address some of vim's shortcomings or add new functionality
+that composes well with existing vim workflows. For this, good resources are 
+[VimAwesome](https://vimawesome.com/) and other programmers' dotfiles.
+- Marks - In vim, you can set a mark doing `m<X>` for some letter `X`. You can 
+then go back to that mark doing `'<X>`. This let's you quickly navigate to specific 
+locations within a file or even across files. 
+- Navigation - `Ctrl+O` and `Ctrl+I` move you backward and forward respectively 
+through your recently visited locations.
+- Undo Tree - Vim has a quite fancy mechanism for keeping track of changes. 
+Unlike other editors, vim stores a tree of changes so even if you undo and 
+then make a different change you can still go back to the original state by 
+navigating the undo tree. Some plugins like [gundo.vim](https://github.com/sjl/gundo.vim) 
+and [undotree](https://github.com/mbbill/undotree) expose this tree in a graphical way. 
+- Undo with time - The `:earlier` and `:later` commands will let you navigate 
+the files using time references instead of one change at a time.
+- [Persistent undo](https://vim.fandom.com/wiki/Using_undo_branches#Persistent_undo) 
+is an amazing built-in feature of vim that is disabled by default. It persists 
+undo history between vim invocations. By setting `undofile` and `undodir` in your 
+`.vimrc`, vim will storage a per-file history of changes.
+- Leader Key - The leader key is a special key that is often left to the user 
+to be configured for custom commands. The pattern is usually to press and 
+release this key (often the space key) and then some other key to execute 
+a certain command. Often, plugins will use this key to add their own functionality, 
+for instance the UndoTree plugin uses `<Leader> U` to open the undo tree. 
+- Advanced Text Objects - Text objects like searches can also be composed 
+with vim commands. E.g. `d/<pattern>` will delete to the next match of said 
+pattern or `cgn` will change the next occurrence of the last searched string. 
+
+## What is 2FA and why should I use it?
+
+Two Factor Authentication (2FA) adds an extra layer of protection to your 
+accounts on top of passwords. In order to login, you not only have to know 
+some password, but you also have to "prove" in some way you have access to 
+some hardware device. In the most simple case, this can be achieved by receiving 
+an SMS on your phone, although there are [known issues](https://www.kaspersky.com/blog/2fa-practical-guide/24219/) 
+with SMS 2FA. A better alternative we endorse is to use a [U2F](https://en.wikipedia.org/wiki/Universal_2nd_Factor) 
+solution like [YubiKey](https://www.yubico.com/).
+
+## Any comments on differences between web browsers?
+
+The current landscape of browsers as of 2020 is that most of them are 
+like Chrome because they use the same engine (Blink). This means that 
+Microsoft Edge which is also based on Blink, and Safari, which is based 
+on WebKit, a similar engine to Blink, are just worse versions of Chrome. 
+Chrome is a reasonably good browser both in terms of performance and 
+usability. Should you want an alternative, Firefox is our recommendation. 
+It is comparable to Chrome in pretty much every regard and it excels 
+for privacy reasons.Another browser called [Flow](https://www.ekioh.com/flow-browser/) 
+is not user ready yet, but it is implementing a new rendering engine 
+that promises to be faster than the current ones. 
